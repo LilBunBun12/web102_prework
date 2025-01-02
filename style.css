@@ -1,8 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+:root {
+    /* Primary Colors */
+    --midnight-depths: #1B263B;
+    --mystic-teal: #1F4E5F;
+    --soft-seafoam: #A2D5C6;
+    --lavender-mist: #D4B8E8;
+    --coral-glow: #FF6F61;
+    --golden-drift: #F7D794;
+  
+    /* Neutral Colors */
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+  }
+
+html{
+    scroll-behavior:smooth;
+}
+
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: var(--midnight-depths);
+}
+
+p{
+    color: var(--soft-seafoam);
+}
+
+h1{
+    color: var(--soft-seafoam);
+}
+
+h2{
+    color: var(--soft-seafoam);
+}
+
+h3{
+    color: var(--soft-seafoam);
+}
+
+#logo{
+    display: inline-flex;
+    
 }
 
 #tentacles {
@@ -11,26 +50,140 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: var(--mystic-teal);
     padding: 1%;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    position:fixed;
+    width:100%;
+    z-index: 1000;
 }
+
+.nav-links{
+    list-style: none;
+    
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a{
+    color: var(--soft-seafoam);
+    transition: all 0.3s ease 0s;
+    text-decoration:none;
+}
+
+.nav-links li a:hover{
+    color: var(--coral-glow);
+}
+
+.nav-links li:hover{
+    color: var(--coral-glow);
+}
+
+.nav-links li a:active,
+.nav-links li a:focus{
+    color:inherit;
+    text-decoration:none;
+}
+
+#home{
+    padding-top: 8%;
+}
+
+/* Cool select starts here */
+
+/* .Dressy{
+    background-image: url("../images/Dressy/BoatBlackshirtandCremePants.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+} */
+
+#SelectContainer{
+    display:flex;
+    width: 100vw;
+    justify-content:center;
+}
+
+.border{
+    background-color: skyblue;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.selectCard{
+    text-align: center;
+    color:var(--light-gray);;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover; 
+    height: 100vh;
+    width:100vw;
+    transition:flex-grow 0.5s;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+    font-size:24px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.selectCard:hover{
+    flex-grow: 5;
+}
+
+
+
+
+.frontPageButton{  
+    background-color:skyblue;
+    object-fit: cover;
+    color: white;
+    cursor: pointer;
+    flex: 1;
+    transition:flex-grow 0.5s;
+    border: 0px;
+    height:100vh;
+    width:100vw;
+}
+
+.frontPageButton:hover{
+    flex-grow: 2;
+}
+
+
+
+/* Cool select ends here */
+
 
 .stats-container {
     display: flex;
 }
 
+
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: var(--mystic-teal);
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
     width: 100%;
     text-align: center;
 }
+
+.stats-card:hover{
+    background-color: var(--coral-glow);
+    box-shadow: 0 0 30px #FF6F61;
+    transition: all 0.3s ease 0s;
+}
+
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
@@ -45,21 +198,23 @@ body {
 .game-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px var(--soft-seafoam);
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: var(--mystic-teal);
     padding: 1%;
     margin: 1%;
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    color: var(--soft-seafoam);
 }
 
 .game-card:hover {
-    cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    background-color: var(--coral-glow);
+    box-shadow: 0 0 30px #FF6F61;
+    transition: all 0.3s ease 0s;
 }
 
 #button-container {
@@ -72,4 +227,25 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--coral-glow);
+    box-shadow: 0 0 30px #FF6F61;
+    transition: all 0.3s ease 0s;
+}
+
+
+/* Fade in transition */
+.fade-in {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1; 
+    transform: translateY(0);
 }

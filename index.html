@@ -9,18 +9,43 @@
   <body>
     <!-- header row with logo -->
     <div class="header">
+        <div id="logo">
         <img id="tentacles" src="assets/tentacles.png">
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
+        </div>
+        <nav class = "navbar">
+            <ul class = "nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Popular">Popular</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#games">Games</a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- background info about company -->
-    <h2>Welcome to Sea Monster!</h2>
-    <div id="description-container">
+<section id="home" class = "fade-in">
+    <h2 style = "text-align: center; color:#F5F5F5">Welcome to Sea Monster!</h2>
+    <div id="description-container" style = "text-align: center;">
         <p>The purpose of our company is to fund independent games. We've been in operation for 12 years.</p>
     </div>
+</section>
+
+
+<section id = "Popular" class = "fade-in">
+    <h2 style = "text-align: center; color:#F5F5F5">Our Popular Games</h2>
+    <div id = "SelectContainer">
+        
+    </div>
+    
+</section>
+
+
+
 
     <!-- top games & other interesting stats -->
-    <h2>Stats</h2>
+<section id="stats" class = "fade-in">
+    <h2 style = "text-align: center; color:#F5F5F5">Stats</h2>
     <div class="stats-container">
         <div class="stats-card">
             <h3>Individual Contributions</h3>
@@ -46,19 +71,46 @@
             <h3>🥈 Runner Up</h3>
         </div>
     </div>
+</section>
+
 
     <!-- list of games funded by Sea Monster -->
-    <h2>Our Games</h2>
-    <p>Check out each of our games below!</p>
+<section id="games" class = "fade-in">
+    <h2 style="text-align: center; color:#F5F5F5">Our Games</h2>
+    <p style="text-align: center; color:#F5F5F5">Check out each of our games below!</p>
     <div id="button-container">
         <button id="unfunded-btn">Show Unfunded Only</button>
         <button id="funded-btn">Show Funded Only</button>
         <button id="all-btn">Show All Games</button>
+        <form action="/search" method = "get">
+            <input type="search" id="searchInput" placeholder = "Type to search..."/>
+        </form>
+        <!-- Put a search button here -->
     </div>
     <div id="games-container">
 
     </div>
-
+</section>
     <script type="module" src="index.js"></script>
   </body>
 </html>
+
+
+
+
+<!-- 
+
+Added Features:
+
+- Color Pallete Change
+- Nav Bar (Also is fixed on the top of the screen)
+- Button Hover Effect: Change of colors and transitions into brightness
+- Search Bar that ignores capitals
+- The cool look menu in the begin of the website
+- Cool Fading in animation
+
+Things need to do when get back:
+- But in the search bar
+- Finish the rest of the prework
+
+-->
