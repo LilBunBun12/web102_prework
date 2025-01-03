@@ -4,7 +4,7 @@ Submitted by: **Leon Fong**
 
 **Improved Sea Monster Website** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **15** hours spent in total
+Time spent: **20** hours spent in total
 
 ## Required Features
 
@@ -39,11 +39,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I struggled with the git upload size limit when trying to upload a GIF. I committed multiple times, and the previous commits, with the too-large file, were stopping me from uploading the more current commits. I solved it by undoing all the commits.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Leon Fong]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
